@@ -30,6 +30,7 @@ waitForInpiut()
 
 // Loop through the entire array "n" times
 // (however many times there are elmnts in the array
+// Create basic implementation
 for i in 0..<dataSet.count-1 {
     // One pass through the array to float the highest number to the end
     for j in 0..<dataSet.count-1 {
