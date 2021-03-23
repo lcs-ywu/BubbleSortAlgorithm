@@ -19,30 +19,30 @@ bubbleSort(unsorted: &newDataSet, showPrompts: false)
 print(newDataSet)
 
 func binarySort(targetNum target:Int) {
-    
+
     var startInd: Int = 0
     var endInd: Int = newDataSet.count-1
     var searchTimes = 1
-    
-    while newDataSet[startInd+endInd/2] != target {
-        
-        if startInd > endInd {
-            print("target not found")
-            break
+
+    while newDataSet[(startInd+endInd)/2] != target && startInd != endInd{
+
+        if newDataSet[(startInd+endInd)/2] < target {
+            startInd = (startInd+endInd)/2 + 1
+        }else if newDataSet[(startInd+endInd)/2] > target{
+            endInd = (startInd+endInd)/2 - 1
         }
-        print(startInd)
-               print(endInd)
-        
-        if newDataSet[startInd+endInd/2] < target {
-            startInd = startInd+endInd/2
-        }else if newDataSet[startInd+endInd/2] > target{
-            endInd = startInd+endInd/2
-        }
-       
+//        print("start \(startInd)")
+//        print("end \(endInd)")
+
         searchTimes += 1
 //        print(searchTimes)
     }
-    print("target found after \(searchTimes) times")
+    if startInd == endInd && newDataSet[(startInd+endInd)/2] != target{
+        print("target not found")
+    }else{
+        print("target found after \(searchTimes) times")
+    }
+    
 }
 
 print("enter your target")
