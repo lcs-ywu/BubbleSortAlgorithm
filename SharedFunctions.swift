@@ -8,7 +8,7 @@
 import Foundation
 
 // Pause to allow the user to see output
-func waitForInpiut() {
+func waitForInput() {
     print("Press Return to continue")
     _ = readLine()
 }
@@ -48,7 +48,7 @@ func bubbleSort(unsorted dataSet: inout [Int], showPrompts: Bool = true) {
             if showPrompts {
                 print("Sorted:")
                 print(dataSet)
-                waitForInpiut()
+                waitForInput()
 
             }
             break
@@ -57,7 +57,7 @@ func bubbleSort(unsorted dataSet: inout [Int], showPrompts: Bool = true) {
         if showPrompts {
             print("Array after pass \(i+1)")
             print(dataSet)
-            waitForInpiut()
+            waitForInput()
         }
         
     }
